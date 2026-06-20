@@ -505,3 +505,61 @@
 //     console.log(i);
     
 // }
+
+
+
+
+
+
+
+// *********** FUNCTION **********
+
+// uses --> if i want to write a code and run it,, but i want that after just writing the code , code will not run ,,,,, when i call them then code will run ,, then i have to use function in our code
+
+// ***** DECLARATION OF FUNCTION
+
+// function udayan(){   // udayan is the name of function,, when i have to call the function i can call them with udayan();
+//     console.log("happy birthday ");
+    
+// }
+
+// udayan(); // i can call the function
+
+// let fcn = function(){  // second method to declare any function
+//     console.log("I love You");
+    
+// }
+
+// fcn();
+
+
+
+
+// ***** ARROW FUNCTION DECLARATION
+
+// let fcn = () => {
+//     console.log("udayan singh");
+    
+// }
+
+// fcn();
+
+
+
+
+// ******** PARAMETER AND ARGUMENT
+
+// function udayan(// parameter){    // parameter take value from argument and code will run according to argument value
+//     console.log("udayan singh")    
+// }
+
+// udayan(// argument);
+
+// function udayan(val1 , val2){
+//     console.log(val1 + val2);
+    
+// }
+
+// udayan(3 , 4);
+
+5 : 02
