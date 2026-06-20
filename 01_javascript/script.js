@@ -410,6 +410,98 @@
 
 // }
 
-console.log("udayan");
 
-console.log("udayan singh")
+
+
+
+
+// ****************** ROCK PAPER SCISSOR GAME **************
+
+// function rps (user , computer){
+
+//     if(user === computer) return "draw";
+
+//     if(user === "rock" && computer === "scisssor") return "user";
+
+//      if(user === "scissor" && computer === "paper") return "user";
+
+//       if(user === "paper" && computer === "rock") return "user";
+
+//       return "computer";
+
+// }
+
+// console.log(rps("scissor", "scissor"));
+
+
+
+
+
+
+// *********** LOOPS ********** 
+
+// anything that will repeate called loop
+
+
+// kanha se jana hai --> kanha tak jana hai --> kaise jana hai --> for loop
+
+// kanha se jana hai --> kab rukn hai --> kaise jana hai --> while loop
+
+
+
+
+// ****** FOR LOOP ********* 
+
+// for(start ; end ; change){
+//     // what i have to run
+// }
+
+// for (let i = 1; i<101 ; i++){
+//     console.log(i);  // print 1 to 100
+// }
+
+
+
+// ********** WHILE LOOP ******** 
+
+// let i = 1;  // start
+// while (end ){
+//     // code
+//     change
+// }
+
+
+
+// ********  DO WHILE LOOP **********
+
+// let i =1;  // start   
+
+// do{
+//     console.log(i); // what i have to run
+//     i++; // change
+    
+// } while(i<20) // end or condition
+
+// if the condition is wrong no matter one time code will run in do while loop ,,, where as in while loop if the end or condition is wrong then while loop is not run
+
+
+
+
+// ******* BREAK AND CONTINUE *********
+
+
+// for(let i = 1; i<201; i++){
+//     console.log(i);
+//     if(i == 34){
+//         break;  // it is used ,, when i want to stop after what i want to print ,, means i want to stop when i == 34 then i use  break and after that code will stop running after 34 print
+//     }
+    
+// }
+
+// for(let i =1; i<201 ; i++){
+//     if (i == 45){
+//         continue;  // it is used to skip that number ,,,, means i want to skip 45 number than i use continue after using, 45 will not print and code will run continue with not printing 45
+//     }
+//     console.log(i);
+    
+// }
