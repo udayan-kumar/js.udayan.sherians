@@ -562,3 +562,256 @@
 
 // udayan(3 , 4);
 
+
+
+// ********  DEFAULT PARAMETETR
+
+// function udayan (val = 1, val2 = 1){  // i can give default value by which if argument doesn't provide any value than default value will be run
+//     console.log(val + val2)
+// }
+
+// udayan();
+
+
+
+
+// ********  REST AND SPACE PARAMETER
+
+// jab argument kai sare ho to humein utne hi parameter banane parte hai ;;; esse bachne ke liye , hum rest ka use karte hai 
+
+// ... --> rest --> function ke parameter space mein laga ho to wo rest operator hai and agar wo arrays and object mein laga wo sprade operator.
+
+
+// function udayan(... val){
+//     console.log(val);
+// }
+
+// udayan(1,2,3,4,5,6,7,8,9,10);
+
+
+
+// function udayan (){   // return
+//     return 22;
+// }
+
+// let kumar = udayan();
+
+// console.log(kumar)
+
+
+//**********  FIRST CLASS FUNCTION
+
+// function ko kisi value ki tarah treat kar sakte hai
+
+// let kumar = function udayan (){
+//     console.log("udayan singh")
+// }
+
+// kumar();
+
+
+
+
+// **********  HIGH ORDER FUNCTION
+
+
+// high order function wo function hota hai jo ki return kare function ya fir accept kare ake function apne parameter mein
+
+
+// function udayan (){
+//     return function () {
+//         console.log("udayan singh");
+//     };
+// }
+
+// udayan()();
+
+
+
+// ********* PURE FUNCTION AND IMPURE FUNCTION
+
+//****** PURE FUNCTION 
+
+    // function jo bahar ka value na badle 
+
+// function udayan (){
+//     console.log("udayan singh");
+// }
+
+//**********  IMPURE FUNCTION  
+
+
+// jis function se bahar ka value badal jaaye
+
+// let a = 13;
+// function udayan(){
+//     a++;
+//     console.log(a);
+// }
+
+
+// ********** CLOUSERS
+
+// ake function jo return ake aur funvction aur return hone wale function humesha use karega parent function ka koi variable
+
+// function udayan (){
+//     let a  = 13; 
+//     return function (){
+//         console.log(a);
+//     }
+// }
+
+
+// *******  LAXICAL SCOPING
+
+// kisis function ka janha tak scoipe rahega wanha tak uska value le sakte hai
+
+// function abcd(){
+//     let a = 12;
+//     function efgh(){
+//         let b =23; 
+//         function ijk(){
+//             let c = 34;
+//         }
+//     }
+// }
+
+
+// ******** IIFE --> IMMEDIATELY INVOKED FUNCTION EXPRESSSION
+
+// (function(){
+
+// })();
+
+
+
+
+// ****** HOISTING
+
+// banne se pahle hum usko call kar sakte hai
+
+// udayan();
+
+// function udayan(){
+//     console.log("udayan singh");
+// }
+
+
+
+
+
+
+// ************ ARRAYS ************ 
+
+// let arr = [1,2,2,3,4,5];    // creating array
+
+// index number will be started from 0
+
+// arr[2] = 29; // updating the array at second index number;;
+
+// let arr = [1,2,3,4,5];
+
+// arr.push(3987); // pushing any number in array in last
+
+// arr.pop(3); //delete any number from array from the last 
+
+// arr.shift(0); // delete number from starting in the array
+
+// arr.unshift(3); // add any number in starting in the array
+
+// arr.splice(2,3); // it removes the value from any index to any index
+
+
+// let newarr = arr.slice(0,4); // it removes the value and store in new variable and original doesn't change
+
+// let sr = arr.sort(function(a,b){  // sort means arrange any array in ascinding order or descinding order
+//     return a - b; // arrange array in ascinding order
+//     return b-a;  // arrange array in the descinding order
+// })
+
+// Array.forEach(function(val){  // forEach loop will be run for each array element and print them particularly
+//     console.log(val);  // print all forEach value
+// })
+
+// let newarr = Array.map(function(val){ // it will run for every element of the array and make a new array and change all the element of original with val and put in newarray and size will be same of both
+//     return 12; // this will return for each element of array in newarray
+// })
+
+// jab bhi aaapko aisa koi case dikha jaaye janha par ake array se naya array banega aur wo naya array kuchh value ko rakhega tab map use karenge;;
+
+
+
+// let newarr = Array.filter(function(val){  // it will form newarray in which we pass the array which are satisfied from original array
+//     return true; // array will passs to new array
+//     return false; // array will not pass in newarray
+// })
+
+
+
+// let ans = Array.reduces(function(accumulator, val){ // it is used to make a single ;ement array ,, 
+//     return accumulator + val; // add all the array and make a single array 
+// },0)
+
+
+// let va = Array.find(function(val){ // it is used to find any element of array 
+//     return val === 1; // when i got first time 1 in the array then return came as a 1;
+// }) 
+
+
+// let any = Array.some(function(val){ // it used to satisfied any element satisfied or not ;; if satisfied then print true and if not satisfied then print false
+//     return val> 2; // it check in the array that any element satisfied this condition or not
+// })
+
+// let ere = Array.every(function(val){ // it check all the element are satisfing or not ,, if all the element are satisfing then print true and if any one element not satisfing the condition then print false,,
+//     return val >13; // it check in array that this condition are satisfied with all element or not;;
+// })
+
+
+// ******* DESTRUCTYING
+
+// let arr = [ 1,2,3,4,5,6];
+// let[a,b,c,d,e] = arr; // it take value from array given to new variable respectively
+
+
+// let arr = [1,2,3,4,5,6,7,8];
+// let arr2 = [... arr] // it wiull copy original array in newarray variable,, if i can change in newarry then original array will not change but newarray will change;;
+
+
+
+
+
+
+
+
+// **************** OBJECT *********
+
+// ******** CREATING OBJECT
+
+// let obj = {
+//     name : "udayan kumar",
+//     age : 17,
+//     food : "chila",
+// }
+
+// ***********  HOW TO ACCESS OBJECT
+
+// obj.name --> i can access name of an object
+// let aa = "name";
+
+// obj[aa] // i can access name of object
+
+
+// for(let key in obj ){
+//     console.log(key, obj[key]);  // ican access both object and their answer particularly
+// }
+
+// Object.keys(obj); // it makes all the object element in one array
+
+// Object.entries(obj); // it make array of array of object element 
+
+// let obj2 = {... obj};  // it give access of all the object in newobject
+
+// let obj2 = Object.assign({}, obj); // it gives access of all the object element in newobect and also add anything in newobject
+
+
+// let obj2 = JSON.parse(JSON.stringify(obj));  // it is used to copy in deep in which if i can chnage in newobj than original object can't chnage but newobj will be chnaged
