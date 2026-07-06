@@ -89,4 +89,4 @@ function kumar(){
 
 kumar.call(obj);
 
-1:45
+2:15
