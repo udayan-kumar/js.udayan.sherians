@@ -172,4 +172,39 @@
 // async --> aisa code jo jab chale ke liye ready ho jaaye tab chale wo async code
 
 // console.log(Math.floor(Math.random()*10));
-3:34
+
+
+// CALL BACK --> ake function ko agar aap ake aur function bhj de rahe ho parameter mein , to wo parameter waala function kehalta hai  callback
+
+// callback ke ander callback
+
+// function profile(username, cb){
+//     console.log("fetching data...");
+//     setTimeout(() => {
+//         cb({username, age: 18, email:" udayan@google.com", occupation: "student"});
+//     }, 2000);
+// }
+
+// function bringpost(username , cb){
+//     console.log("fetching post..");
+//     setTimeout(() => {
+//         cb({username: username, post:["udayan singh", "kaise ho"]})
+//     },3000)
+// }
+
+// function bringsavedpost(username, cb){
+//     console.log("fetching saved post...")
+//     setTimeout(() => {
+//         cb({username: username, saved: [1,2,3,4,5,6]});
+//     }, 4000)
+// }
+
+// profile("harsh" , function(data){
+//     console.log(data);
+//         bringpost(data.username, function(post){
+//             console.log(post);
+//                 bringsavedpost(data.username, function(saved){
+//                     console.log(saved);
+//                 })
+//         });
+// });
