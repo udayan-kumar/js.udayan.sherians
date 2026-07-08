@@ -208,3 +208,37 @@
 //                 })
 //         });
 // });
+
+// PROMISES --> aap ake promses banate ho jo ki do state me jata hai and wo yaa to resolve hoga ya to reject hoga ab wo kya hoga ye to waqt batayegsa par humein dono ke liye code likhna padta hai
+
+// let pr = new Promise (function(resolve, rej){
+//     setTimeout(() => {
+//        let rn = Math.floor(Math.random()*10);
+//        if(rn > 5){
+//         resolve("resolve with"+rn);
+//        }
+//        else {
+//         rej("reject with"+rn);
+//        }
+//     }, 3000)
+// })
+
+// pr.then(function(val){
+//     console.log(val);
+// }).catch(function(val){
+//     console.log(val);
+// })
+
+
+// FETCH API
+
+// fetch("https://randomuser.me/api/?results=5000")
+// .then((rawdta) => {
+//     return rawdata.json()
+// })
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch((error) => {
+//     console.log(error);
+// })
