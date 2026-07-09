@@ -19,7 +19,6 @@ let Bank = (function(){
             console.log(bankbalnce);
         }
     }
-
     return{
         checkbalnce,
         setbalance,
