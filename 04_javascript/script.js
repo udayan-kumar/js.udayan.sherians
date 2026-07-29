@@ -137,20 +137,38 @@
 
 //! DEBOUNCING --> AAP KOI ACTION KAR RAHE HO AND AAP YE NHII CHAHTE HAR ACTION PE KUCHH HO , JAB BHI MERE ACTION KE BEECH MEIN KOI SPECIFIC GAP AAJAYE TO FIR REACTION PERFORM HO
 
-function debouncing(fnc , delay){
-    let timer;
+// function debouncing(fnc , delay){
+//     let timer;
+//     return function(...args){
+//         clearTimeout(timer);
+//         timer = setTimeout(function () {
+//             fnc(...args);
+//         }, delay)
+//     };
+// }
+
+// document.querySelector("input").addEventListener("input" , debouncing(function () {
+//     console.log("udayan singh");
+// }, 1000)
+// );
+
+
+//! THROTTLE --> INTERVAL PAR CHALUNGA , ACTION HOTA RAHA AND AAPNE EK INTERVAL BATAYA TIO UTNE INTERVAL MEIN AAPKA EVENT CHALEGA
+
+
+function throttle(fnc , delay){
+    let timer = 0;
     return function(...args){
-        clearTimeout(timer);
-        timer = setTimeout(function () {
+        let now = Date.now();
+        if(now - timer >= delay){
+            timer = now;
             fnc(...args);
-        }, delay)
+        }
     };
 }
 
-document.querySelector("input").addEventListener("input" , debouncing(function () {
+
+document.querySelector("input").addEventListener("input" , throttle(function(){
     console.log("udayan singh");
 }, 1000)
 );
-
-
-
