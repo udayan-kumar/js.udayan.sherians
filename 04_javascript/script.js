@@ -156,19 +156,44 @@
 //! THROTTLE --> INTERVAL PAR CHALUNGA , ACTION HOTA RAHA AND AAPNE EK INTERVAL BATAYA TIO UTNE INTERVAL MEIN AAPKA EVENT CHALEGA
 
 
-function throttle(fnc , delay){
-    let timer = 0;
-    return function(...args){
-        let now = Date.now();
-        if(now - timer >= delay){
-            timer = now;
-            fnc(...args);
-        }
-    };
-}
+// function throttle(fnc , delay){
+//     let timer = 0;
+//     return function(...args){
+//         let now = Date.now();
+//         if(now - timer >= delay){
+//             timer = now;
+//             fnc(...args);
+//         }
+//     };
+// }
 
 
-document.querySelector("input").addEventListener("input" , throttle(function(){
-    console.log("udayan singh");
-}, 1000)
+// document.querySelector("input").addEventListener("input" , throttle(function(){
+//     console.log("udayan singh");
+// }, 1000)
+// );
+
+//! LAZY LOADING
+
+let img = document.querySelectorAll("img");
+
+const observer = new IntersectionObserver(
+    function (entries, observer){
+        entries.forEach(function (entry){
+            if(entry.isIntersecting){
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add("loaded");
+                observer.unobserve(entry);
+            }
+        });
+    },
+    {
+        root: null,
+        threshold: 0.1,
+    }
 );
+
+img.forEach(function (img){
+    observer.observe(img);
+});
