@@ -291,18 +291,18 @@
 
 //! CALL STACK(EXECUTION STACK) --> JS SINGLE-THREADED HAI --> AKE TIME PAR AKE HI KAAM KARTA HAI .... JAB HUM FUNCTION CALL KARTE HAI -> WO STACK KE TOP PE CHALA JATA HAI ..... FUNCTION COMPLETE HONE KE BAAD STACK SE NIKAL JATA HAI(POP HO JATA HAI)...
 
-function a(){
-    console.log("a");
-}
+// function a(){
+//     console.log("a");
+// }
 
-function b(){
-    a();
-    console.log("b");
-}
+// function b(){
+//     a();
+//     console.log("b");
+// }
 
-function c(){
-    b();
-    console.log("c")
-}
+// function c(){
+//     b();
+//     console.log("c")
+// }
 
-c();
+// c();
