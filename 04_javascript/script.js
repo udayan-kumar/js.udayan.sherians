@@ -212,13 +212,31 @@
 
 //! AVOIDING UNNECESSARY REFLOWS AND REPAINTS
 
-const ul = document.querySelector("ul");
-const space = document.createDocumentFragment();
+// const ul = document.querySelector("ul");
+// const space = document.createDocumentFragment();
 
-for(let i = 1; i<=100 ;i++){
-    const li = document.createElement("li");
-    li.textContent = i;
-    space.appendChild(li);
-}
+// for(let i = 1; i<=100 ;i++){
+//     const li = document.createElement("li");
+//     li.textContent = i;
+//     space.appendChild(li);
+// }
 
-ul.appendChild(space);
+// ul.appendChild(space);
+
+
+
+
+//! MEMORY LEAK , TIMER , EVENT LISTNER
+
+let count = 0;
+
+const int = setInterval(() => {
+    if(count<10){
+        count++;
+        console.log(count);
+    }
+    else{
+        clearInterval(int);
+        console.log("udayan singh");
+    }
+}, 500);
