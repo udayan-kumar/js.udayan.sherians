@@ -246,20 +246,41 @@
 
 //! SEPERATION CONCERNS --> DOM KA CODE AND LOGIC KA CODE ALAG REHNA CHAHIYE
 
-const btn = document.querySelector("button");
-const ul = document.querySelector("ul");
+// const btn = document.querySelector("button");
+// const ul = document.querySelector("ul");
 
-function add(num1  , num2){
-    return num1 + num2;
+// function add(num1  , num2){
+//     return num1 + num2;
+// }
+
+// btn.addEventListener("click", function(){
+//     const num1 = Math.floor(Math.random()*10);
+//     const num2 = Math.floor(Math.random()*10);
+
+//     let finaladd = add(num1 , num2);
+
+//     let li = document.createElement("li");
+//     li.textContent = finaladd;
+//     ul.appendChild(li);
+// });
+
+
+
+
+
+
+//! OWN BUILT-IN FUNCTION
+
+const arr = [1,2,3,4,5];
+
+function mymap(arr, callback){
+    let newarr = [];
+    for(let i =0; i<arr.length; i++){
+        newarr.push(callback(arr[i]));
+    }
+    return newarr;
 }
 
-btn.addEventListener("click", function(){
-    const num1 = Math.floor(Math.random()*10);
-    const num2 = Math.floor(Math.random()*10);
-
-    let finaladd = add(num1 , num2);
-
-    let li = document.createElement("li");
-    li.textContent = finaladd;
-    ul.appendChild(li);
-});
+let ans = mymap(arr, function(val){
+    return val + 2;
+})
