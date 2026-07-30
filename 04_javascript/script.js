@@ -175,25 +175,35 @@
 
 //! LAZY LOADING
 
-let img = document.querySelectorAll("img");
+// let img = document.querySelectorAll("img");
 
-const observer = new IntersectionObserver(
-    function (entries, observer){
-        entries.forEach(function (entry){
-            if(entry.isIntersecting){
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.add("loaded");
-                observer.unobserve(entry);
-            }
-        });
-    },
-    {
-        root: null,
-        threshold: 0.1,
-    }
-);
+// const observer = new IntersectionObserver(
+//     function (entries, observer){
+//         entries.forEach(function (entry){
+//             if(entry.isIntersecting){
+//                 const img = entry.target;
+//                 img.src = img.dataset.src;
+//                 img.classList.add("loaded");
+//                 observer.unobserve(entry);
+//             }
+//         });
+//     },
+//     {
+//         root: null,
+//         threshold: 0.1,
+//     }
+// );
 
-img.forEach(function (img){
-    observer.observe(img);
-});
+// img.forEach(function (img){
+//     observer.observe(img);
+// });
+
+
+//! CODE SPLITING --> CODE KO HUM ALAG ALAG FILE MEIN DAAL DIYE AUR USKO JAB AUR JANHA CHAHE USE KAR SAKTE HAI
+
+const btn = document.querySelector("button");
+
+btn.addEventListener("click" , async function(){
+    let heavy = await import("./heavy.js");
+    heavy.veryheavy();
+})
