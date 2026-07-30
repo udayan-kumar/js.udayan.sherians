@@ -201,9 +201,24 @@
 
 //! CODE SPLITING --> CODE KO HUM ALAG ALAG FILE MEIN DAAL DIYE AUR USKO JAB AUR JANHA CHAHE USE KAR SAKTE HAI
 
-const btn = document.querySelector("button");
+// const btn = document.querySelector("button");
 
-btn.addEventListener("click" , async function(){
-    let heavy = await import("./heavy.js");
-    heavy.veryheavy();
-})
+// btn.addEventListener("click" , async function(){
+//     let heavy = await import("./heavy.js");
+//     heavy.veryheavy();
+// })
+
+
+
+//! AVOIDING UNNECESSARY REFLOWS AND REPAINTS
+
+const ul = document.querySelector("ul");
+const space = document.createDocumentFragment();
+
+for(let i = 1; i<=100 ;i++){
+    const li = document.createElement("li");
+    li.textContent = i;
+    space.appendChild(li);
+}
+
+ul.appendChild(space);
