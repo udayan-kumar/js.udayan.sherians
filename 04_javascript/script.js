@@ -271,16 +271,38 @@
 
 //! OWN BUILT-IN FUNCTION
 
-const arr = [1,2,3,4,5];
+// const arr = [1,2,3,4,5];
 
-function mymap(arr, callback){
-    let newarr = [];
-    for(let i =0; i<arr.length; i++){
-        newarr.push(callback(arr[i]));
-    }
-    return newarr;
+// function mymap(arr, callback){
+//     let newarr = [];
+//     for(let i =0; i<arr.length; i++){
+//         newarr.push(callback(arr[i]));
+//     }
+//     return newarr;
+// }
+
+// let ans = mymap(arr, function(val){
+//     return val + 2;
+// })
+
+
+
+
+
+//! CALL STACK(EXECUTION STACK) --> JS SINGLE-THREADED HAI --> AKE TIME PAR AKE HI KAAM KARTA HAI .... JAB HUM FUNCTION CALL KARTE HAI -> WO STACK KE TOP PE CHALA JATA HAI ..... FUNCTION COMPLETE HONE KE BAAD STACK SE NIKAL JATA HAI(POP HO JATA HAI)...
+
+function a(){
+    console.log("a");
 }
 
-let ans = mymap(arr, function(val){
-    return val + 2;
-})
+function b(){
+    a();
+    console.log("b");
+}
+
+function c(){
+    b();
+    console.log("c")
+}
+
+c();
