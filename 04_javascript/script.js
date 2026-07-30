@@ -228,15 +228,38 @@
 
 //! MEMORY LEAK , TIMER , EVENT LISTNER
 
-let count = 0;
+// let count = 0;
 
-const int = setInterval(() => {
-    if(count<10){
-        count++;
-        console.log(count);
-    }
-    else{
-        clearInterval(int);
-        console.log("udayan singh");
-    }
-}, 500);
+// const int = setInterval(() => {
+//     if(count<10){
+//         count++;
+//         console.log(count);
+//     }
+//     else{
+//         clearInterval(int);
+//         console.log("udayan singh");
+//     }
+// }, 500);
+
+
+
+
+//! SEPERATION CONCERNS --> DOM KA CODE AND LOGIC KA CODE ALAG REHNA CHAHIYE
+
+const btn = document.querySelector("button");
+const ul = document.querySelector("ul");
+
+function add(num1  , num2){
+    return num1 + num2;
+}
+
+btn.addEventListener("click", function(){
+    const num1 = Math.floor(Math.random()*10);
+    const num2 = Math.floor(Math.random()*10);
+
+    let finaladd = add(num1 , num2);
+
+    let li = document.createElement("li");
+    li.textContent = finaladd;
+    ul.appendChild(li);
+});
